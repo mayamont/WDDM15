@@ -15,7 +15,7 @@
         <button class="button" onclick="Education()">Education</button>
         <button class="button" onclick="WorkHistory()">Work History</button>
         <button class="button" onclick="Skills()">Skills</button>
-        <button class="button" onclick="location.href='http://www.linkedin.com/in/mayara-monteiro-da-silva-89160b179/'">Linkedin</button><br>
+        <button class="button" onclick="Languages()">Languages</button><br>
         
         
         <!-- Texts that will be changed according to the button clicked <!-->  
@@ -85,8 +85,16 @@
             <li>Amazon Redshift</li>
             <li>Amazon S3</li>
           </ul>
+        <!-- List of languages <!-->  
+          <ul class="list" id = "languages" hidden = "hidden">
+            <li>Portuguese</li>
+            <li>English</li>
+            <li>Spanish</li>
+            <li>French</li>
+          </ul>
+          
         </div>
-        <div class="item5"><iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=f60A6qoThk2xn7gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="item5"><button class="button" onclick="location.href='http://www.linkedin.com/in/mayara-monteiro-da-silva-89160b179/'">Contact me on Linkedin</button><br><iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=f60A6qoThk2xn7gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
       </div>
     </body>
     <script>
@@ -105,47 +113,61 @@
         const myElement10 = document.getElementById("textp");
         let myElement11 = document.getElementById("skills");
         let hidden3 = myElement11.getAttribute("hidden");
+        let myElement12 = document.getElementById("languages");
+        let hidden4 = myElement12.getAttribute("hidden");
 
         // Changes the texts when the About me button is clicked
         function AboutMe(a){
-            var texto = "I am a <b>proactive</b> Data Analyst with a proven track record of driving impactful insights through technical expertise. Currently expanding my horizons by pursuing studies in Web Design and Development at Humber College in Toronto.<br> In my most recent position as a Data Analyst, I specialized in Wealth Management at BTG Pactual. Proficient in financial concepts including Revenue, NNM, and AUM, I harnessed my technical skills in <b>PySpark, SQL, Power BI</b> and <b>AWS tools</b> to facilitate perceptive analysis and reporting. Leading a pivotal project, I orchestrated data consolidation for daily metric tracking, collaborating cross-functionally to ensure data integrity and deliver invaluable insights. My enthusiasm lies in translating data into strategic decisions, reinforcing BTG Pactual Wealth Management success.<br> At TERA, I strategically devised roadmaps, extracted and refined data, and generated comprehensive reports using <b>SQL, BigQuery, Tableau</b> and <b>Google Apps Script</b>. Collaborating with stakeholders, I played a pivotal role in shaping long-term growth strategies rooted in data insights, while meticulously documenting user-centric requirements.<br> In my initial role as an Automation and Business Intelligence Solutions Developer at DXC Technology, I excelled in leveraging <b>Microsoft Power BI, SQL, C#</b> and <b>WinAutomation</b> to drive data-powered solutions. My direct collaboration with internal stakeholders involved understanding business needs, designing BI solutions, and delivering quantitative analyses that translated intricate data into actionable strategies.<br> Throughout my journey, I have consistently demonstrated an adept analytical mindset, technical prowess, and an unwavering commitment to informed decision-making. My passion lies in delivering tangible results through data-driven approaches.<br><br> <b>Open to new challenges and opportunities that allow me to blend my expertise with innovative solutions!</b>" 
-            myElement.innerHTML = "About me";
-            myElement2.innerHTML = texto;
-            myElement5.setAttribute("hidden", "hidden");
-            myElement8.setAttribute("hidden", "hidden");
-            myElement11.setAttribute("hidden", "hidden");
-        
-
-
+          var texto = "I am a <b>proactive</b> Data Analyst with a proven track record of driving impactful insights through technical expertise. Currently expanding my horizons by pursuing studies in Web Design and Development at Humber College in Toronto.<br> In my most recent position as a Data Analyst, I specialized in Wealth Management at BTG Pactual. Proficient in financial concepts including Revenue, NNM, and AUM, I harnessed my technical skills in <b>PySpark, SQL, Power BI</b> and <b>AWS tools</b> to facilitate perceptive analysis and reporting. Leading a pivotal project, I orchestrated data consolidation for daily metric tracking, collaborating cross-functionally to ensure data integrity and deliver invaluable insights. My enthusiasm lies in translating data into strategic decisions, reinforcing BTG Pactual Wealth Management success.<br> At TERA, I strategically devised roadmaps, extracted and refined data, and generated comprehensive reports using <b>SQL, BigQuery, Tableau</b> and <b>Google Apps Script</b>. Collaborating with stakeholders, I played a pivotal role in shaping long-term growth strategies rooted in data insights, while meticulously documenting user-centric requirements.<br> In my initial role as an Automation and Business Intelligence Solutions Developer at DXC Technology, I excelled in leveraging <b>Microsoft Power BI, SQL, C#</b> and <b>WinAutomation</b> to drive data-powered solutions. My direct collaboration with internal stakeholders involved understanding business needs, designing BI solutions, and delivering quantitative analyses that translated intricate data into actionable strategies.<br> Throughout my journey, I have consistently demonstrated an adept analytical mindset, technical prowess, and an unwavering commitment to informed decision-making. My passion lies in delivering tangible results through data-driven approaches.<br><br> <b>Open to new challenges and opportunities that allow me to blend my expertise with innovative solutions!</b>" 
+          myElement.innerHTML = "About me";
+          myElement2.innerHTML = texto;
+          myElement5.setAttribute("hidden", "hidden");
+          myElement8.setAttribute("hidden", "hidden");
+          myElement11.setAttribute("hidden", "hidden");
+          myElement12.setAttribute("hidden", "hidden");
         }
-
+          
         // Changes the texts when the Education button is clicked
         function Education(b){
-            myElement3.innerHTML = "Education";
-            myElement4.innerHTML = "";
-            myElement5.removeAttribute("hidden");
-            myElement8.setAttribute("hidden", "hidden");
-            myElement11.setAttribute("hidden", "hidden");
+          myElement3.innerHTML = "Education";
+          myElement4.innerHTML = "";
+          myElement5.removeAttribute("hidden");
+          myElement8.setAttribute("hidden", "hidden");
+          myElement11.setAttribute("hidden", "hidden");
+          myElement12.setAttribute("hidden", "hidden");
 
         }
 
         // Changes the texts when the Work History button is clicked
         function WorkHistory(b){
-            myElement6.innerHTML = "Work History";
-            myElement7.innerHTML = "";
-            myElement5.setAttribute("hidden", "hidden");
-            myElement11.setAttribute("hidden", "hidden");
-            myElement8.removeAttribute("hidden");
+          myElement6.innerHTML = "Work History";
+          myElement7.innerHTML = "";
+          myElement5.setAttribute("hidden", "hidden");
+          myElement11.setAttribute("hidden", "hidden");
+          myElement12.setAttribute("hidden", "hidden");
+          myElement8.removeAttribute("hidden");
 
         }
 
         // Changes the texts when the Skills button is clicked
         function Skills(b){
-            myElement9.innerHTML = "Skills";
-            myElement10.innerHTML = "";
-            myElement5.setAttribute("hidden", "hidden");
-            myElement8.setAttribute("hidden", "hidden");
-            myElement11.removeAttribute("hidden");
+          myElement9.innerHTML = "Skills";
+          myElement10.innerHTML = "";
+          myElement5.setAttribute("hidden", "hidden");
+          myElement8.setAttribute("hidden", "hidden");
+          myElement12.setAttribute("hidden", "hidden");
+          myElement11.removeAttribute("hidden");
+
+        }
+
+        // Changes the texts when the Skills button is clicked
+        function Languages(b){
+          myElement9.innerHTML = "Languages";
+          myElement10.innerHTML = "";
+          myElement5.setAttribute("hidden", "hidden");
+          myElement8.setAttribute("hidden", "hidden");
+          myElement11.setAttribute("hidden", "hidden");
+          myElement12.removeAttribute("hidden");
 
         }
 
