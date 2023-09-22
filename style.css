@@ -1,27 +1,26 @@
-body
+.item1 { grid-area: header; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container 
 {
+    display: grid;
+    grid-template-areas:
+      'header header header header header'
+      'main main right right right'
+      'footer footer footer footer footer';
+    gap: 10px;
     background-color: #d8bddb;
-    
-
-
+    padding: 10px;
 }
 
-img
-{  
-    display: block;
-    margin-left: auto;
-    margin-right: 30px;
-    margin-top: 60px;
-    margin-bottom: 115px;
-    float: left;
-    
-
-}
-
-figcaption
+.grid-container > div 
 {
-    caption-side: bottom;
+    text-align: center;
+    background-color: #d8bddb;
 }
+
 
 p.text 
 {
